@@ -51,7 +51,7 @@ text2.addEventListener("mouseenter",function(){
     }
     
 
-    text2.textContent = "Is the same as from "  + (calculateText(new Date((new Date()) - (Doomsday - new Date())))+86400000) + " to now";
+    text2.textContent = "Is the same as from "  + (calculateText(new Date((new Date()) - (Doomsday - new Date())))) + " to now";
     
 
 })
