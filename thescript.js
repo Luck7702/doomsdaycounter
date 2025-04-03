@@ -6,7 +6,7 @@ let doomsdayhascome = 0;
 let Doomsday = new Date("2025-9-8");
 
 function calculatedayz(Target){
-    let x = (Math.ceiling((Target - new Date()) / (1000 * 3600 * 24)));
+    let x = (Math.ceil((Target - new Date()) / (1000 * 3600 * 24)));
     if(x <= 0 ){
 
         doomsdayhascome = 1;
