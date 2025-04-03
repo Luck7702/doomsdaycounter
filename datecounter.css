@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+
+
+body{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    user-select: none;
+    margin: 0;
+}
+
+.textz{
+
+    font-size: 270%;
+    color: rgb(255, 0, 0);
+    font-family: Doto;
+    
+}
+
+
+
+#textz1{
+
+    margin-top: 0px;
+
+}
+
+
+
+#textz2{
+
+    
+    font-size: 260%;
+    border: solid;
+    padding: 60px;
+    padding-left: 80px;
+    padding-right: 80px;
+    border-radius: 20px;
+
+}
+
+#textz2:hover{
+
+    
+    color: white;
+ 
+
+}
+
+#datestring:hover{
+
+    color: rgba(255, 255, 255, 0.863);
+
+}
