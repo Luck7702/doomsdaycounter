@@ -3,7 +3,7 @@ let text2 = document.getElementById("textz2");
 
 let doomsdayhascome = 0;
 
-let Doomsday = new Date("2025-9-8");
+let Doomsday = new Date("2025-09-08");
 
 function calculatedayz(Target){
     let x = (Math.floor((Target - new Date()) / (1000 * 3600 * 24)));
