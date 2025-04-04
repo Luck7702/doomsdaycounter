@@ -1,12 +1,12 @@
 let datestring = document.getElementById("datestring");
 let text2 = document.getElementById("textz2");
-
-let doomsdayhascome = 0;
+let dateInput = document.getElementById("dateInput");
 
 let Doomsday = new Date("2025-09-08");
+let doomsdayhascome = 0;
 
 function calculatedayz(Target){
-    let x = (Math.floor((Target - new Date()) / (1000 * 3600 * 24)));
+    let x = (Math.ceil((Target - new Date()) / (1000 * 3600 * 24)));
     if(x <= 0 ){
 
         doomsdayhascome = 1;
@@ -35,12 +35,9 @@ function calculateText(date){
 
 }
 
-
-
 let bruhDate = calculatedayz(Doomsday);
 
-datestring.textContent =  calculateText(Doomsday);   
-
+datestring.textContent = calculateText(Doomsday);
 text2.textContent = bruhDate
 
 text2.addEventListener("mouseenter",function(){
@@ -49,21 +46,16 @@ text2.addEventListener("mouseenter",function(){
         text2.textContent = "May God be with You";
         return;
     }
-    
-
-    text2.textContent = "Is the same as from "  + (calculateText(new Date((new Date()) - (Doomsday - new Date())))) + " to now";
-    
-
+    text2.textContent = "Is the same as from "  + 
+    (calculateText((new Date  ((Number((new Date()) - (Doomsday - new Date())))-(1000*3600*7)))  )) + " to now";
+    console.log("As From : " + (new Date  ((Number((new Date()) - (Doomsday - new Date())))-(1000*3600*7))));
 })
 
 text2.addEventListener("mouseleave",function(){
 
     text2.textContent = calculatedayz(Doomsday)
 
-
 })
-
-let dateInput = document.getElementById("dateInput");
 
 datestring.addEventListener("click",function(){
 
@@ -73,14 +65,5 @@ datestring.addEventListener("click",function(){
         text2.textContent = bruhDate;
         Doomsday = new Date(this.value);
         datestring.textContent = calculateText(Doomsday);
-        
-        
-        
     })
-
-
 })
-
-
-
-
