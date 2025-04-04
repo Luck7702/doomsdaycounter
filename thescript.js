@@ -47,8 +47,10 @@ text2.addEventListener("mouseenter",function(){
         return;
     }
     text2.textContent = "Is the same as from "  + 
-    (calculateText((new Date  ((Number((new Date()) - (Doomsday - new Date())))-(1000*3600*7)))  )) + " to now";
-    console.log("As From : " + (new Date  ((Number((new Date()) - (Doomsday - new Date())))-(1000*3600*7))));
+    (calculateText((new Date  ((new Date()) - ((Doomsday - new Date()) - (1000 * 3600 * 7)))))) + " to now";
+    console.log("As From : " + (new Date  ((new Date()) - ((Doomsday - new Date())- (1000 * 3600 * 7)))));
+    console.log("Current Date : " + new Date());
+    console.log("Doomsday : " + new Date(Doomsday - (1000 * 3600 * 7)));
 })
 
 text2.addEventListener("mouseleave",function(){
@@ -61,9 +63,10 @@ datestring.addEventListener("click",function(){
 
     dateInput.showPicker();
     dateInput.addEventListener("change", function(){
-        bruhDate = calculatedayz(new Date(this.value));
+        
         text2.textContent = bruhDate;
         Doomsday = new Date(this.value);
+        bruhDate = calculatedayz(Doomsday);
         datestring.textContent = calculateText(Doomsday);
     })
 })
