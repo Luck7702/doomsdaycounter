@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
 
-
 body{
+    
     flex-direction: column;
     display: flex;
     justify-content: center;
@@ -13,25 +13,18 @@ body{
 }
 
 .textz{
-
+    
     font-size: 270%;
     color: rgb(255, 0, 0);
-    font-family: Doto;
-    
+    font-family: Doto;    
 }
-
-
 
 #textz1{
-
+    
     margin-top: 0px;
-
 }
 
-
-
 #textz2{
-
     
     font-size: 260%;
     border: solid;
@@ -39,19 +32,15 @@ body{
     padding-left: 80px;
     padding-right: 80px;
     border-radius: 20px;
-
 }
 
 #textz2:hover{
-
     
-    color: white;
- 
-
+    color: rgba(255, 255, 255, 0.863);
+    border-color: rgba(255, 255, 255, 0.863);
 }
 
 #datestring:hover{
-
+    
     color: rgba(255, 255, 255, 0.863);
-
 }
