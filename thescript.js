@@ -12,8 +12,7 @@ function calculatedayz(Target){
 
     let x = (Math.ceil((Target - new Date()) / (1000 * 3600 * 24)));
 
-    if(x <= 0 ){
-        doomsdayhascome = 1;
+    if(x <= 0 ){doomsdayhascome = 1;
         return ("Doomsday has come");        
     }; doomsdayhascome = 0;
 
@@ -62,11 +61,13 @@ text2.addEventListener("mouseleave", function(){text2.textContent = calculateday
 datestring.addEventListener("click", function(){ 
 
     dateInput.showPicker();
-    dateInput.addEventListener("change", function(){
+   
+})
+
+dateInput.addEventListener("change", function(){
         
-        Doomsday = new Date(this.value); Doomsday -= OFFSET;
-        
-        bruhDate = calculatedayz(Doomsday); text2.textContent = bruhDate;
-        datestring.textContent = calculateText(Doomsday);
-    })
+    Doomsday = new Date(this.value); Doomsday -= OFFSET;
+    
+    bruhDate = calculatedayz(Doomsday); text2.textContent = bruhDate;
+    datestring.textContent = calculateText(Doomsday);
 })
