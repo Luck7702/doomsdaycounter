@@ -14,10 +14,10 @@ function calculatedayz(Target){
     let x = (Math.ceil((Target - new Date()) / (1000 * 3600 * 24)));
 
     if(x <= 0 ){doomsdayhascome = 1;
-        ggtext.textContent = "since";
+        ggtext.textContent = "since ";
         return ("Doomsday has come");        
     }; doomsdayhascome = 0;
-    ggtext.textContent = "until";
+    ggtext.textContent = "until ";
     return String((x)+" Days");
 }
 
