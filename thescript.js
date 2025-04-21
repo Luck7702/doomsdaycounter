@@ -4,6 +4,7 @@ const OFFSET     = (25200000);    // 7 Hours difference cuz of UTC +7
 let datestring = document.getElementById("datestring");
 let text2 = document.getElementById("textz2");
 let dateInput = document.getElementById("dateInput");
+let ggtext = document.getElementById("ggtext");
 
 let Doomsday = new Date("2025-09-08"); Doomsday -= OFFSET; 
 let doomsdayhascome = 0;
@@ -13,9 +14,10 @@ function calculatedayz(Target){
     let x = (Math.ceil((Target - new Date()) / (1000 * 3600 * 24)));
 
     if(x <= 0 ){doomsdayhascome = 1;
+        ggtext.textContent = "since";
         return ("Doomsday has come");        
     }; doomsdayhascome = 0;
-
+    ggtext.textContent = "until";
     return String((x)+" Days");
 }
 
