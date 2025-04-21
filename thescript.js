@@ -4,7 +4,7 @@ const OFFSET     = (25200000);    // 7 Hours difference cuz of UTC +7
 let datestring = document.getElementById("datestring");
 let text2 = document.getElementById("textz2");
 let dateInput = document.getElementById("dateInput");
-let ggtext = document.getElementById("ggtext");
+let ggtext = document.getElementById("untilsince");
 
 let Doomsday = new Date("2025-09-08"); Doomsday -= OFFSET; 
 let doomsdayhascome = 0;
