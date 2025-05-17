@@ -1,3 +1,5 @@
+const DEFAULT_DOOMSDAY = new Date("2025-08-18");   // De Default Doomsday
+
 const DAY_IN_MS  = (86400000);    // Amount of Milliseconds in a Day
 const OFFSET     = (25200000);    // 7 Hours difference cuz of UTC +7
 
@@ -6,7 +8,7 @@ let text2 = document.getElementById("textz2");
 let dateInput = document.getElementById("dateInput");
 let ggtext = document.getElementById("untilsince");
 
-let Doomsday = new Date("2025-09-08"); Doomsday -= OFFSET; 
+let Doomsday = DEFAULT_DOOMSDAY; Doomsday -= OFFSET; 
 let doomsdayhascome = 0;
 
 function calculatedayz(Target){
